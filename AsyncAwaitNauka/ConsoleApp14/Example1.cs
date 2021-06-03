@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -7,31 +9,32 @@ namespace AsyncAwait
 {
     class Example1
     {
-	static async Task Start()
+	public static async Task Start1()
 	{
-	    //var watch = Stopwatch.StartNew();
-	    //var x = await Task.Run(() => { return Async2(); });
-	    //var y = await Task.Run(() => { return Async3(); });
-	    ////await Task.WhenAll(new Task[] { Async2(), Async3() });
-	    //Console.WriteLine(x + y);
-	    //Console.WriteLine(watch.ElapsedMilliseconds);
+	    var watch = Stopwatch.StartNew();
+	    var x = await Task.Run(() => { return Async2(); });
+	    var y = await Task.Run(() => { return Async3(); });
+	    //await Task.WhenAll(new Task[] { Async2(), Async3() });
+	    Console.WriteLine(x + y);
+	    Console.WriteLine(watch.ElapsedMilliseconds);
+	}
 
-	    //await AsyncVoidExceptions_CannotBeCaughtByCatch();
-	    //Console.Read();
 
-	    //int x = await Async2();
-	    //int y = 1 + 1;
-	    //Console.WriteLine("I dont need async result");
-	    //Console.WriteLine($"I need async result - {x}");
-	    //Console.Read();
+	public static async Task Start3() 
+	{
+	    var x = Async2();
+	    int y = 1 + 1;
+	    Console.WriteLine("I dont need async result");
+	    Console.WriteLine($"I need async result - {await x}");
+	    Console.Read();
+	}
 
-	    //Task<int> task2 = Async2();
-	    //Console.Read();
-	    //Console.WriteLine("Working...");
-	    //Console.WriteLine(await task2);
-
-	    //Async2();
-	    //Console.Read();
+	public static async Task Start4() 
+	{
+	    Task<int> task2 = Async2();
+	    Console.Read();
+	    Console.WriteLine("Working...");
+	    Console.WriteLine(await task2);
 	}
 
 	public static async Task<int> Async2()
@@ -47,29 +50,6 @@ namespace AsyncAwait
 	    return 3;
 	}
 
-	public static async Task Async4()
-	{
-	    await Async2();
-	}
-
-	public static async Task AsyncVoidExceptions_CannotBeCaughtByCatch()
-	{
-	    try
-	    {
-		await ThrowExceptionAsync();
-	    }
-	    catch (Exception)
-	    {
-		// The exception is never caught here!
-		throw;
-	    }
-	}
-
-	private static async Task ThrowExceptionAsync()
-	{
-	    Task.Delay(500);
-	    throw new InvalidOperationException();
-	}
 
 	public async Task<int> GetUrlContentLengthAsync()
 	{

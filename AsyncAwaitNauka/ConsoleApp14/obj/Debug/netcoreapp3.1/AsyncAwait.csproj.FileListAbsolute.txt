@@ -11,3 +11,16 @@ C:\Nauka\AsyncAwaitNauka\ConsoleApp14\obj\Debug\netcoreapp3.1\AsyncAwait.csproj.
 C:\Nauka\AsyncAwaitNauka\ConsoleApp14\obj\Debug\netcoreapp3.1\AsyncAwait.dll
 C:\Nauka\AsyncAwaitNauka\ConsoleApp14\obj\Debug\netcoreapp3.1\AsyncAwait.pdb
 C:\Nauka\AsyncAwaitNauka\ConsoleApp14\obj\Debug\netcoreapp3.1\AsyncAwait.genruntimeconfig.cache
+C:\Nauka\AsyncLearnRepo\AsyncAwaitNauka\ConsoleApp14\bin\Debug\netcoreapp3.1\AsyncAwait.exe
+C:\Nauka\AsyncLearnRepo\AsyncAwaitNauka\ConsoleApp14\bin\Debug\netcoreapp3.1\AsyncAwait.deps.json
+C:\Nauka\AsyncLearnRepo\AsyncAwaitNauka\ConsoleApp14\bin\Debug\netcoreapp3.1\AsyncAwait.runtimeconfig.json
+C:\Nauka\AsyncLearnRepo\AsyncAwaitNauka\ConsoleApp14\bin\Debug\netcoreapp3.1\AsyncAwait.runtimeconfig.dev.json
+C:\Nauka\AsyncLearnRepo\AsyncAwaitNauka\ConsoleApp14\bin\Debug\netcoreapp3.1\AsyncAwait.dll
+C:\Nauka\AsyncLearnRepo\AsyncAwaitNauka\ConsoleApp14\bin\Debug\netcoreapp3.1\AsyncAwait.pdb
+C:\Nauka\AsyncLearnRepo\AsyncAwaitNauka\ConsoleApp14\obj\Debug\netcoreapp3.1\AsyncAwait.csprojAssemblyReference.cache
+C:\Nauka\AsyncLearnRepo\AsyncAwaitNauka\ConsoleApp14\obj\Debug\netcoreapp3.1\AsyncAwait.AssemblyInfoInputs.cache
+C:\Nauka\AsyncLearnRepo\AsyncAwaitNauka\ConsoleApp14\obj\Debug\netcoreapp3.1\AsyncAwait.AssemblyInfo.cs
+C:\Nauka\AsyncLearnRepo\AsyncAwaitNauka\ConsoleApp14\obj\Debug\netcoreapp3.1\AsyncAwait.csproj.CoreCompileInputs.cache
+C:\Nauka\AsyncLearnRepo\AsyncAwaitNauka\ConsoleApp14\obj\Debug\netcoreapp3.1\AsyncAwait.dll
+C:\Nauka\AsyncLearnRepo\AsyncAwaitNauka\ConsoleApp14\obj\Debug\netcoreapp3.1\AsyncAwait.pdb
+C:\Nauka\AsyncLearnRepo\AsyncAwaitNauka\ConsoleApp14\obj\Debug\netcoreapp3.1\AsyncAwait.genruntimeconfig.cache
