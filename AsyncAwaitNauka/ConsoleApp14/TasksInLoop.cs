@@ -1,30 +1,48 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace AsyncAwait
 {
+     class Foo
+    {
+	public DateTime Now { get; set; }
+    }
+
     class TasksInLoop
     {
-	private static IEnumerable<int> numbers = new List<int>() { 1, 2, 3 };
+	public DateTime Now { get; set; }
 
-	public async static Task<int[]> Start1()
+	public static async Task PopulateDates()
 	{
-	    var numbersTasks = numbers.Select(id => ExampleWait(id));
-	    return await Task.WhenAll(numbersTasks);
+	    var ordinals = new List<int>() { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, };
+
+	    var foos = ordinals.Select(o => new Foo()); //.ToList();
+
+	    var tasks = foos.Select(f => PopulateDateAsync(f)); //.ToList();
+
+	    await Task.WhenAll(tasks);
+
+	    var firstNow = foos.ElementAt(0).Now;
+	    var firstTaskStatus = tasks.ElementAt(0).Status;
+	    Console.WriteLine(firstNow);
+	    Console.WriteLine(firstTaskStatus);
 	}
 
-	static async Task Start2()
+	private static Task PopulateDateAsync(Foo foo)
 	{
-	    numbers.ToList().ForEach(id =>  ExampleWait(id));
+	    return Task.Run(() => PopulateDate(foo));
 	}
 
-	private async static Task<int> ExampleWait(int i)
+	private static async Task PopulateDate(Foo foo)
 	{
-	    await Task.Delay(1000 * i);
-	    return i;
+	   await Task.Delay(2000);
+	    foo.Now = DateTime.Now;
 	}
     }
+    
 }
